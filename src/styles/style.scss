@@ -1,0 +1,130 @@
+body{
+    margin: 0px;
+}
+
+.navbar{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(13, 97, 187);
+    padding: 20px;
+    color: white;
+    font-size: 20px;
+    border-bottom: solid 2px orange;
+    &__logo{
+        font-weight: bold;
+        font-size: 25px;
+        i{
+            color: orange;
+        }
+    }
+    &__links{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        :first-child{
+            margin-left: 0px;
+        }
+        &__link{
+            margin-left: 30px;
+            font-size: 25px;
+            text-decoration: none;
+            color: white;
+            &:hover{
+                cursor: pointer;
+                color: orange;
+            }
+        }
+    }
+}
+
+.menu{
+    background-color: rgb(13, 97, 187);
+    color: white;
+    width: 25%;
+    &__container{
+        height: 87%;
+        overflow-y: auto;
+        &__option{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 15px 20px;
+            margin: 0px 5px;
+            border-top: solid 2px rgb(159, 159, 229);
+            font-size: 20px;
+            &:hover{
+                cursor: pointer;
+                background-color: lighten($color: rgb(13, 97, 187), $amount: 10);
+            }
+            &__name{
+                margin-left: 10px;
+            }
+            &__icon{
+                width: 20px;
+                color: orange;
+            }
+        }
+    }
+    &__search{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: 5px;
+        input{
+            padding: 15px 10px;
+            width: 100%;
+            font-size: 20px;
+            border: none;
+            outline: none;
+            background-color: rgb(227, 227, 241);
+        }
+    }
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    margin-top: 70px;
+    height: 91.5vh;
+}
+
+.process-view{
+    width: 80%;
+    height: 100%;
+    overflow-y: auto;
+    position: relative;
+    &__title{
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        background-color: rgb(224, 186, 114);
+        padding: 15px;
+        margin: 5px;
+        font-size: 23px;
+        font-weight: bold;
+        text-align: center;
+    }
+    &__image{
+        margin-top: 70px;
+        height: 90%;
+        overflow-y: auto;
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
+    &--vierge{
+        background-image: url("../../public/images/wave.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: auto;
+    }
+}
